@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./public/css/sttle.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studentOCDBX/MyDevWebLearning-P3-project.git"
+  },
+  "author": "Nazaire DARBOUX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/studentOCDBX/MyDevWebLearning-P3-project/issues"
+  },
+  "homepage": "https://github.com/studentOCDBX/MyDevWebLearning-P3-project#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
