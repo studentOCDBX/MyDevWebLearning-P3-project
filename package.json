@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./public/css/sttle.css"
+    "sass": "sass --watch ./sass/style.scss:./public/css/sttle.css",
+    "prefix": "postcss ./public/css/sttle.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "Nazaire DARBOUX",
   "license": "ISC",
+  "browserslist":"last 4 versions",
   "bugs": {
     "url": "https://github.com/studentOCDBX/MyDevWebLearning-P3-project/issues"
   },
