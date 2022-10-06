@@ -38,4 +38,32 @@ body {
   font-size: 1.2rem;
 }
 
+.presentation {
+  width: 100vw;
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 32px;
+}
+.presentation .presentation__heading {
+  font-size: 1.7em;
+}
+.presentation p {
+  font-size: 1.1em;
+  color: #696969;
+}
+.presentation .btn {
+  display: inline-block;
+  width: 70%;
+  margin: 1em 0 1em 0;
+  padding: 1em 0 1em 0;
+  color: #fff;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  border-radius: 1.6em;
+  -webkit-border-radius: 1.6em;
+  -moz-border-radius: 1.6em;
+  -ms-border-radius: 1.6em;
+  -o-border-radius: 1.6em;
+  box-shadow: 7px 7px 6px 5px #eaeaea;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,7 @@ $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 $white-color: #fff;
 $bright-gray: #eaeaea;
+$dimgray: #696969;
 $color-cultured: #f6f6f6;
 $color-jet: #353535;
 
@@ -54,5 +55,39 @@ body {
   }
   p {
     font-size: 1.2rem;
+  }
+}
+.presentation {
+  width: 100vw;
+  // height: 80%;
+  background-color: $color-cultured;
+  text-align: center;
+  padding: 32px;
+  .presentation__heading {
+    font-size: 1.7em;
+  }
+  p {
+    font-size: 1.1em;
+    color: $dimgray;
+  }
+
+  .btn {
+    display: inline-block;
+    width: 70%;
+    margin: 1em 0 1em 0;
+    // margin: 16 auto;
+    padding: 1em 0 1em 0;
+    color: $white-color;
+    background: linear-gradient(
+      180deg,
+      $secondary-color 0%,
+      $primary-color 100%
+    );
+    border-radius: 1.6em;
+    -webkit-border-radius: 1.6em;
+    -moz-border-radius: 1.6em;
+    -ms-border-radius: 1.6em;
+    -o-border-radius: 1.6em;
+    box-shadow: 7px 7px 6px 5px $bright-gray;
   }
 }
