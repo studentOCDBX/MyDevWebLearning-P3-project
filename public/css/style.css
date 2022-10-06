@@ -14,7 +14,7 @@ body {
 .header {
   width: 100vw;
   height: 10%;
-  box-shadow: 1px 4px 8px #eaeaea;
+  box-shadow: 0px 2px 0px 1px #696969;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ body {
 .location {
   width: 100vw;
   height: 8%;
-  background-color: #eaeaea;
+  background-color: rgba(229, 229, 229, 0.78);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +63,25 @@ body {
   -moz-border-radius: 1.6em;
   -ms-border-radius: 1.6em;
   -o-border-radius: 1.6em;
-  box-shadow: 7px 7px 6px 5px #eaeaea;
+  box-shadow: 7px 7px 6px 5px #e5e5e5;
+}
+
+.fonctioning {
+  width: 100vw;
+  padding: 1.5em;
+}
+.fonctioning .fonctioning__btn {
+  width: 90vw;
+  color: #000;
+  background-color: #f6f6f6;
+  border-radius: 1.5em;
+  -webkit-border-radius: 1.5em;
+  -moz-border-radius: 1.5em;
+  -ms-border-radius: 1.5em;
+  -o-border-radius: 1.5em;
+}
+.fonctioning h2 {
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=style.css.map */
