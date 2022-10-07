@@ -5,10 +5,13 @@ $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 $white-color: #fff;
-$whisper-color: #e5e5e5;
-$dimgray: #696969;
+$bright_gray-color: #eaeaea;
 $cultured-color: #f6f6f6;
+$magnolia-color: #f5edff;
 $jet-color: #353535;
+$whisper-color: #e5e5e5;
+$gray-color: #7e7e7e;
+$dimgray: #696969;
 $black-color: #000;
 
 * {
@@ -30,6 +33,23 @@ body {
   display: flex;
 }
 
+// @mixin space--arround {
+//   @include d--flex;
+//   justify-content: space-around;
+//   align-items: center;
+// }
+
+// @mixin space--between {
+//   @include d--flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+@mixin flex--start {
+  @include d--flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 @mixin flex--center {
   @include d--flex;
   justify-content: center;
@@ -49,7 +69,7 @@ body {
 .location {
   width: 100vw;
   height: 8%;
-  background-color: rgba(229, 229, 229, 0.78);
+  background-color: rgba($whisper-color, 0.78);
   @include flex--center;
   &__fa {
     padding-right: 24px;
@@ -69,14 +89,13 @@ body {
   }
   p {
     font-size: 1.1em;
-    color: $dimgray;
+    color: $gray-color;
   }
 
   .btn {
     display: inline-block;
     width: 70%;
     margin: 1em 0 1em 0;
-    // margin: 16 auto;
     padding: 1em 0 1em 0;
     color: $white-color;
     background: linear-gradient(
@@ -85,37 +104,63 @@ body {
       $primary-color 100%
     );
     border-radius: 1.6em;
+    box-shadow: 7px 7px 6px 5px $whisper-color;
     -webkit-border-radius: 1.6em;
     -moz-border-radius: 1.6em;
     -ms-border-radius: 1.6em;
     -o-border-radius: 1.6em;
-    box-shadow: 7px 7px 6px 5px $whisper-color;
   }
 }
 
 .fonctioning {
   width: 100vw;
+  height: 60%;
   padding: 1.5em;
+  background-color: $white-color;
 
-  .fonctioning__btn {
+  &__btn {
     width: 90vw;
+    padding: 1em 0 1em 0;
+    margin-bottom: 1.5em;
     color: $black-color;
     background-color: $cultured-color;
+    @include flex--start;
     border-radius: 1.5em;
     -webkit-border-radius: 1.5em;
     -moz-border-radius: 1.5em;
     -ms-border-radius: 1.5em;
     -o-border-radius: 1.5em;
+    box-shadow: 2px 4px 6px 1px $whisper-color;
+    &__number {
+      @include flex--center;
+      width: 1.7em;
+      height: 1.7em;
+      border-radius: 1.25em;
+      color: $white-color;
+      margin-left: -16px;
+      background-color: $primary-color;
+      -webkit-border-radius: 1.25em;
+      -moz-border-radius: 1.25em;
+      -ms-border-radius: 1.25em;
+      -o-border-radius: 1.25em;
+    }
+    &--magnolia {
+      background-color: $magnolia-color;
+    }
+    &__i {
+      margin: 0px 24px 0 24px;
+      color: $gray-color;
+      &--indigo {
+        color: $primary-color;
+      }
+    }
+    & > p {
+      color: $black-color;
+      font-weight: 600;
+    }
   }
-  h2 {
+
+  &__heading {
     text-transform: capitalize;
   }
-
-  // p {
-  // }
-
-  // &:nth-child(1) {
-  //   background-color: $bright-gray;
-  //   color: $black-color;
-  // }
 }

@@ -49,7 +49,7 @@ body {
 }
 .presentation p {
   font-size: 1.1em;
-  color: #696969;
+  color: #7e7e7e;
 }
 .presentation .btn {
   display: inline-block;
@@ -59,28 +59,65 @@ body {
   color: #fff;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   border-radius: 1.6em;
+  box-shadow: 7px 7px 6px 5px #e5e5e5;
   -webkit-border-radius: 1.6em;
   -moz-border-radius: 1.6em;
   -ms-border-radius: 1.6em;
   -o-border-radius: 1.6em;
-  box-shadow: 7px 7px 6px 5px #e5e5e5;
 }
 
 .fonctioning {
   width: 100vw;
+  height: 60%;
   padding: 1.5em;
+  background-color: #fff;
 }
-.fonctioning .fonctioning__btn {
+.fonctioning__btn {
   width: 90vw;
+  padding: 1em 0 1em 0;
+  margin-bottom: 1.5em;
   color: #000;
   background-color: #f6f6f6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   border-radius: 1.5em;
   -webkit-border-radius: 1.5em;
   -moz-border-radius: 1.5em;
   -ms-border-radius: 1.5em;
   -o-border-radius: 1.5em;
+  box-shadow: 2px 4px 6px 1px #e5e5e5;
 }
-.fonctioning h2 {
+.fonctioning__btn__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 1.25em;
+  color: #fff;
+  margin-left: -16px;
+  background-color: #9356dc;
+  -webkit-border-radius: 1.25em;
+  -moz-border-radius: 1.25em;
+  -ms-border-radius: 1.25em;
+  -o-border-radius: 1.25em;
+}
+.fonctioning__btn--magnolia {
+  background-color: #f5edff;
+}
+.fonctioning__btn__i {
+  margin: 0px 24px 0 24px;
+  color: #7e7e7e;
+}
+.fonctioning__btn__i--indigo {
+  color: #9356dc;
+}
+.fonctioning__btn > p {
+  color: #000;
+  font-weight: 600;
+}
+.fonctioning__heading {
   text-transform: capitalize;
 }
 
