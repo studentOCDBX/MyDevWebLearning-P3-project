@@ -68,9 +68,11 @@ body {
 
 .fonctioning {
   width: 100vw;
-  height: 60%;
   padding: 1.5em;
   background-color: #fff;
+}
+.fonctioning__heading {
+  text-transform: capitalize;
 }
 .fonctioning__btn {
   width: 90vw;
@@ -96,7 +98,7 @@ body {
   height: 1.7em;
   border-radius: 1.25em;
   color: #fff;
-  margin-left: -16px;
+  margin-left: -4%;
   background-color: #9356dc;
   -webkit-border-radius: 1.25em;
   -moz-border-radius: 1.25em;
@@ -117,8 +119,70 @@ body {
   color: #000;
   font-weight: 600;
 }
-.fonctioning__heading {
+
+.restaurants {
+  width: 100vw;
+  padding: 1.5em;
+  background-color: #f6f6f6;
+}
+.restaurants__heading {
   text-transform: capitalize;
+}
+.restaurants__card {
+  width: 100%;
+  margin-bottom: 1.2em;
+  border-radius: 1.25em;
+  -webkit-border-radius: 1.25em;
+  -moz-border-radius: 1.25em;
+  -ms-border-radius: 1.25em;
+  -o-border-radius: 1.25em;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 2px 4px 6px 1px #e5e5e5;
+}
+.restaurants__card > a {
+  text-decoration: none;
+}
+.restaurants__card__img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.25em 1.25em 0 0;
+  -webkit-border-radius: 1.25em 1.25em 0 0;
+  -moz-border-radius: 1.25em 1.25em 0 0;
+  -ms-border-radius: 1.25em 1.25em 0 0;
+  -o-border-radius: 1.25em 1.25em 0 0;
+}
+.restaurants__card__body {
+  width: 100%;
+  display: flex;
+  color: #000;
+  padding: 0 1em 1em 1em;
+}
+.restaurants__card__body > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurants__card__body > div h3 {
+  margin: 0.5em 0 0.5em 0;
+}
+.restaurants__card__body > div p {
+  margin: 0.5em 0 0 0;
+  text-transform: capitalize;
+  font-size: 1.2em;
+}
+.restaurants__card__body span {
+  color: #000;
+  background-color: #99e2d0;
+  padding: 0.5em;
+  text-transform: capitalize;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.restaurants__card__body--span-none {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

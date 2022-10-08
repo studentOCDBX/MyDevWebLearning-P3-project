@@ -39,11 +39,12 @@ body {
 //   align-items: center;
 // }
 
-// @mixin space--between {
-//   @include d--flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
+@mixin flex--between {
+  @include d--flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @mixin flex--start {
   @include d--flex;
   justify-content: flex-start;
@@ -78,9 +79,9 @@ body {
     font-size: 1.2rem;
   }
 }
+
 .presentation {
   width: 100vw;
-  // height: 80%;
   background-color: $cultured-color;
   text-align: center;
   padding: 32px;
@@ -114,10 +115,12 @@ body {
 
 .fonctioning {
   width: 100vw;
-  height: 60%;
   padding: 1.5em;
   background-color: $white-color;
 
+  &__heading {
+    text-transform: capitalize;
+  }
   &__btn {
     width: 90vw;
     padding: 1em 0 1em 0;
@@ -137,7 +140,7 @@ body {
       height: 1.7em;
       border-radius: 1.25em;
       color: $white-color;
-      margin-left: -16px;
+      margin-left: -4%;
       background-color: $primary-color;
       -webkit-border-radius: 1.25em;
       -moz-border-radius: 1.25em;
@@ -159,8 +162,70 @@ body {
       font-weight: 600;
     }
   }
+}
+
+.restaurants {
+  width: 100vw;
+  padding: 1.5em;
+  background-color: $cultured-color;
 
   &__heading {
     text-transform: capitalize;
+  }
+
+  &__card {
+    width: 100%;
+    margin-bottom: 1.2em;
+    border-radius: 1.25em;
+    -webkit-border-radius: 1.25em;
+    -moz-border-radius: 1.25em;
+    -ms-border-radius: 1.25em;
+    -o-border-radius: 1.25em;
+    background-color: $white-color;
+    position: relative;
+    box-shadow: 2px 4px 6px 1px $whisper-color;
+
+    & > a {
+      text-decoration: none;
+    }
+    &__img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 1.25em 1.25em 0 0;
+      -webkit-border-radius: 1.25em 1.25em 0 0;
+      -moz-border-radius: 1.25em 1.25em 0 0;
+      -ms-border-radius: 1.25em 1.25em 0 0;
+      -o-border-radius: 1.25em 1.25em 0 0;
+    }
+    &__body {
+      width: 100%;
+      @include d--flex;
+      color: $black-color;
+      padding: 0 1em 1em 1em;
+      & > div {
+        width: 100%;
+        @include flex--between;
+        & h3 {
+          margin: 0.5em 0 0.5em 0;
+        }
+        & p {
+          margin: 0.5em 0 0 0;
+          text-transform: capitalize;
+          font-size: 1.2em;
+        }
+      }
+      & span {
+        color: $black-color;
+        background-color: $tertiary-color;
+        padding: 0.5em;
+        text-transform: capitalize;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+      }
+      &--span-none {
+        display: none;
+      }
+    }
   }
 }
