@@ -145,6 +145,7 @@ body {
 }
 .restaurants__card__img {
   width: 100%;
+  height: 13.75em;
   object-fit: cover;
   border-radius: 1.25em 1.25em 0 0;
   -webkit-border-radius: 1.25em 1.25em 0 0;
