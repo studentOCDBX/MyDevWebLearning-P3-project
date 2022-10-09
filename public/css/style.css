@@ -182,8 +182,33 @@ body {
   top: 1em;
   right: 1em;
 }
-.restaurants__card__body--span-none {
+.restaurants__card__body span.--span-none {
   display: none;
+}
+
+.footer {
+  color: #fff;
+  background-color: #353535;
+  padding: 1.5em;
+}
+.footer__heading {
+  font-family: "Shrikhand", cursive;
+  font-weight: 300;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer ul li {
+  margin-bottom: 1em;
+}
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1em;
+}
+.footer ul li a.--padding-left-none {
+  padding-left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
