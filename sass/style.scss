@@ -40,15 +40,14 @@
 
 img {
   width: 100%;
-  position: relative;
   object-fit: cover;
+  position: relative;
   z-index: 100;
 }
-.main {
+.container {
   position: relative;
   z-index: 200;
   width: 100vw;
-  // margin: auto;
   background-color: $cultured-color;
   border: 1px solid red;
   padding: 1em;
@@ -109,7 +108,10 @@ img {
       }
     }
   }
+  .btn--modify {
+    width: 60%;
+    @extend .btn;
+    @include flexCenter;
+    margin: 3em auto;
+  }
 }
-
-//       }
-//     }

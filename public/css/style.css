@@ -33,7 +33,7 @@ body {
  	MAIN
 *************
 */
-.btn {
+.btn, .container .btn--modify {
   display: inline-block;
   width: 70%;
   margin: 1em 0 1em 0;
@@ -244,12 +244,12 @@ body {
 
 img {
   width: 100%;
-  position: relative;
   object-fit: cover;
+  position: relative;
   z-index: 100;
 }
 
-.main {
+.container {
   position: relative;
   z-index: 200;
   width: 100vw;
@@ -262,25 +262,25 @@ img {
   -ms-border-radius: 1.9em 1.9em 0 0;
   -o-border-radius: 1.9em 1.9em 0 0;
 }
-.main > div {
+.container > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.main > div i {
+.container > div i {
   font-size: 1.7em;
 }
-.main__heading {
+.container__heading {
   font-family: "Shrikhand";
   font-size: 1.8em;
 }
-.main__section {
+.container__section {
   width: 100%;
 }
-.main__section__inner {
+.container__section__inner {
   width: 100%;
 }
-.main__section__inner > h2 {
+.container__section__inner > h2 {
   text-transform: uppercase;
   font-size: 1.2em;
   font-weight: 400;
@@ -289,7 +289,7 @@ img {
   border-bottom: 2px solid #99e2d0;
   margin: 1.5em 0 1em 0;
 }
-.main__section__inner__btn {
+.container__section__inner__btn {
   background-color: #fff;
   padding: 1em;
   margin-bottom: 1.2em;
@@ -301,16 +301,23 @@ img {
   -o-border-radius: 1.5em;
   -webkit-border-radius: 1.2em;
 }
-.main__section__inner__btn h3 {
+.container__section__inner__btn h3 {
   margin: 0;
 }
-.main__section__inner__btn__inner {
+.container__section__inner__btn__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.main__section__inner__btn__inner p {
+.container__section__inner__btn__inner p {
   margin: 0.5em 0 0 0;
+}
+.container .btn--modify {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em auto;
 }
 
 /*# sourceMappingURL=style.css.map */
