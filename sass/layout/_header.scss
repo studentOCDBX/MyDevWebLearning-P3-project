@@ -1,0 +1,9 @@
+.header {
+  width: 100vw;
+  height: 10%;
+  box-shadow: 0px 2px 0px 1px $gray-color;
+  @include flexCenter;
+  &__arrow {
+    display: none;
+  }
+}

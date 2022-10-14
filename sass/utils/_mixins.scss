@@ -1,0 +1,41 @@
+@mixin dFlex {
+  display: flex;
+}
+
+@mixin flexBetween {
+  @include dFlex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexStart {
+  @include dFlex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flexCenter {
+  @include dFlex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexColumn {
+  @include dFlex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+@mixin flexEvenly {
+  @include dFlex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@mixin flexAround {
+  @include dFlex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin shadow($color) {
+  box-shadow: 2px 6px 12px 0 $color;
+}

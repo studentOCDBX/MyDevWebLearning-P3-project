@@ -1,0 +1,146 @@
+@import "../components/boutton";
+
+.location {
+  width: 100vw;
+  height: 8%;
+  background-color: rgba($whisper-color, 0.78);
+  @include flexCenter;
+  &__fa {
+    padding-right: 24px;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.presentation {
+  width: 100vw;
+  background-color: $cultured-color;
+  text-align: center;
+  padding: 32px;
+  .presentation__heading {
+    font-size: 1.7em;
+  }
+  p {
+    font-size: 1.1em;
+    color: $gray-color;
+  }
+}
+
+.fonctioning {
+  width: 100vw;
+  padding: 1.5em;
+  background-color: $white-color;
+
+  &__heading {
+    text-transform: capitalize;
+  }
+  &__btn {
+    width: 90vw;
+    padding: 1em 0 1em 0;
+    margin-bottom: 1.5em;
+    color: $black-color;
+    background-color: $cultured-color;
+    @include flexStart;
+    border-radius: 1.5em;
+    -webkit-border-radius: 1.5em;
+    -moz-border-radius: 1.5em;
+    -ms-border-radius: 1.5em;
+    -o-border-radius: 1.5em;
+    @include shadow($whisper-color);
+    &__number {
+      @include flexCenter;
+      width: 1.7em;
+      height: 1.7em;
+      border-radius: 1.25em;
+      color: $white-color;
+      margin-left: -4%;
+      background-color: $primary-color;
+      -webkit-border-radius: 1.25em;
+      -moz-border-radius: 1.25em;
+      -ms-border-radius: 1.25em;
+      -o-border-radius: 1.25em;
+    }
+    &--magnolia {
+      background-color: $magnolia-color;
+    }
+    &__i {
+      margin: 0px 24px 0 24px;
+      color: $gray-color;
+      &--indigo {
+        color: $primary-color;
+      }
+    }
+    & > p {
+      color: $black-color;
+      font-weight: 600;
+    }
+  }
+}
+
+.restaurants {
+  width: 100vw;
+  padding: 1.5em 1.5em 3em 1.5em;
+  background-color: $cultured-color;
+
+  &__heading {
+    text-transform: capitalize;
+  }
+
+  &__card {
+    width: 100%;
+    margin-bottom: 1.2em;
+    border-radius: 1.25em;
+    -webkit-border-radius: 1.25em;
+    -moz-border-radius: 1.25em;
+    -ms-border-radius: 1.25em;
+    -o-border-radius: 1.25em;
+    background-color: $white-color;
+    position: relative;
+    @include shadow($whisper-color);
+
+    & > a {
+      text-decoration: none;
+    }
+    &__img {
+      width: 100%;
+      height: 13.75em;
+      object-fit: cover;
+      border-radius: 1.25em 1.25em 0 0;
+      -webkit-border-radius: 1.25em 1.25em 0 0;
+      -moz-border-radius: 1.25em 1.25em 0 0;
+      -ms-border-radius: 1.25em 1.25em 0 0;
+      -o-border-radius: 1.25em 1.25em 0 0;
+    }
+    &__body {
+      width: 100%;
+      @include dFlex;
+      color: $black-color;
+      padding: 0 1em 1em 1em;
+      & > div {
+        width: 100%;
+        @include flexBetween;
+        & h3 {
+          margin: 0.5em 0 0.5em 0;
+        }
+        & p {
+          margin: 0.5em 0 0 0;
+          text-transform: capitalize;
+          font-size: 1.2em;
+        }
+      }
+      & span {
+        color: $black-color;
+        background-color: $tertiary-color;
+        padding: 0.5em;
+        text-transform: capitalize;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        &.--span-none {
+          display: none;
+        }
+      }
+    }
+  }
+}
