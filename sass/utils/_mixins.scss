@@ -39,3 +39,10 @@
 @mixin shadow($color) {
   box-shadow: 2px 6px 12px 0 $color;
 }
+@mixin heart-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 100%
+  );
+}

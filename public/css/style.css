@@ -216,48 +216,66 @@ body {
 }
 
 .container {
-  margin-top: -50px;
+  margin-top: -3.125em;
   position: relative;
   z-index: 200;
   width: 100vw;
   background-color: #f6f6f6;
-  padding: 1em;
+  padding: 2em 1em 1em 1em;
   border-radius: 1.9em 1.9em 0 0;
   -webkit-border-radius: 1.9em 1.9em 0 0;
   -moz-border-radius: 1.9em 1.9em 0 0;
   -ms-border-radius: 1.9em 1.9em 0 0;
   -o-border-radius: 1.9em 1.9em 0 0;
 }
-.container > div {
+.container__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container > div i {
-  font-size: 1.7em;
-}
-.container__heading {
+.container__heading h1 {
   font-family: "Shrikhand";
   font-size: 1.8em;
 }
-.container__section {
+.container__heading__fa__container {
+  font-size: 1.5em;
+}
+.container__heading__fa__container:active > i {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.container__heading__fa__container:active > i::after {
+  background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.container__content {
   width: 100%;
 }
-.container__section__inner {
+.container__content__inner {
   width: 100%;
 }
-.container__section__inner > h2 {
+.container__content__inner > h2 {
   text-transform: uppercase;
   font-size: 1.2em;
   font-weight: 400;
   color: #7e7e7e;
+  margin: 1.7em 0 1.2em 0;
 }
-.container__section__inner > h2 span {
+.container__content__inner > h2 span {
   padding-bottom: 0.25em;
   border-bottom: 2px solid #99e2d0;
   margin: 1.5em 0 1em 0;
 }
-.container__section__inner__btn {
+.container__content__inner__btn {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
   background-color: #fff;
   padding: 1em;
   margin-bottom: 1.2em;
@@ -269,16 +287,37 @@ body {
   -o-border-radius: 1.5em;
   -webkit-border-radius: 1.2em;
 }
-.container__section__inner__btn h3 {
+.container__content__inner__btn h3 {
   margin: 0;
 }
-.container__section__inner__btn__inner {
+.container__content__inner__btn__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container__section__inner__btn__inner p {
+.container__content__inner__btn__body p {
   margin: 0.5em 0 0 0;
+}
+.container__content__inner__btn__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 65px;
+  right: -70px;
+  bottom: 0;
+  top: 0;
+  background-color: #99e2d0;
+}
+.container__content__inner__btn__check .fa-circle-check {
+  font-size: 28px;
+  color: #fff;
+}
+.container__content__inner__btn:hover .container__content__inner__btn__body {
+  width: calc(100% - 70px);
+}
+.container__content__inner__btn:hover .container__content__inner__btn__check {
+  right: 0;
 }
 .container .btn--modify {
   width: 55%;
@@ -342,48 +381,66 @@ body {
 }
 
 .container {
-  margin-top: -50px;
+  margin-top: -3.125em;
   position: relative;
   z-index: 200;
   width: 100vw;
   background-color: #f6f6f6;
-  padding: 1em;
+  padding: 2em 1em 1em 1em;
   border-radius: 1.9em 1.9em 0 0;
   -webkit-border-radius: 1.9em 1.9em 0 0;
   -moz-border-radius: 1.9em 1.9em 0 0;
   -ms-border-radius: 1.9em 1.9em 0 0;
   -o-border-radius: 1.9em 1.9em 0 0;
 }
-.container > div {
+.container__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container > div i {
-  font-size: 1.7em;
-}
-.container__heading {
+.container__heading h1 {
   font-family: "Shrikhand";
   font-size: 1.8em;
 }
-.container__section {
+.container__heading__fa__container {
+  font-size: 1.5em;
+}
+.container__heading__fa__container:active > i {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.container__heading__fa__container:active > i::after {
+  background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.container__content {
   width: 100%;
 }
-.container__section__inner {
+.container__content__inner {
   width: 100%;
 }
-.container__section__inner > h2 {
+.container__content__inner > h2 {
   text-transform: uppercase;
   font-size: 1.2em;
   font-weight: 400;
   color: #7e7e7e;
+  margin: 1.7em 0 1.2em 0;
 }
-.container__section__inner > h2 span {
+.container__content__inner > h2 span {
   padding-bottom: 0.25em;
   border-bottom: 2px solid #99e2d0;
   margin: 1.5em 0 1em 0;
 }
-.container__section__inner__btn {
+.container__content__inner__btn {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
   background-color: #fff;
   padding: 1em;
   margin-bottom: 1.2em;
@@ -395,16 +452,37 @@ body {
   -o-border-radius: 1.5em;
   -webkit-border-radius: 1.2em;
 }
-.container__section__inner__btn h3 {
+.container__content__inner__btn h3 {
   margin: 0;
 }
-.container__section__inner__btn__inner {
+.container__content__inner__btn__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container__section__inner__btn__inner p {
+.container__content__inner__btn__body p {
   margin: 0.5em 0 0 0;
+}
+.container__content__inner__btn__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 65px;
+  right: -70px;
+  bottom: 0;
+  top: 0;
+  background-color: #99e2d0;
+}
+.container__content__inner__btn__check .fa-circle-check {
+  font-size: 28px;
+  color: #fff;
+}
+.container__content__inner__btn:hover .container__content__inner__btn__body {
+  width: calc(100% - 70px);
+}
+.container__content__inner__btn:hover .container__content__inner__btn__check {
+  right: 0;
 }
 .container .btn--modify {
   width: 55%;
