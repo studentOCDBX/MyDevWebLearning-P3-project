@@ -1,4 +1,5 @@
 @import "../components/boutton";
+@import "../utils/variables";
 
 .location {
   width: 100vw;
@@ -101,16 +102,16 @@
 
     & > a {
       text-decoration: none;
-    }
-    &__img {
-      width: 100%;
-      height: 13.75em;
-      object-fit: cover;
-      border-radius: 1.25em 1.25em 0 0;
-      -webkit-border-radius: 1.25em 1.25em 0 0;
-      -moz-border-radius: 1.25em 1.25em 0 0;
-      -ms-border-radius: 1.25em 1.25em 0 0;
-      -o-border-radius: 1.25em 1.25em 0 0;
+      & img {
+        width: 100%;
+        height: 13.75em;
+        object-fit: cover;
+        border-radius: 1.25em 1.25em 0 0;
+        -webkit-border-radius: 1.25em 1.25em 0 0;
+        -moz-border-radius: 1.25em 1.25em 0 0;
+        -ms-border-radius: 1.25em 1.25em 0 0;
+        -o-border-radius: 1.25em 1.25em 0 0;
+      }
     }
     &__body {
       width: 100%;
@@ -129,6 +130,61 @@
           font-size: 1.2em;
         }
       }
+      // Cas de deux fas (un solid et un regular
+      .restaurants__card__body__fa__container {
+        position: relative;
+        // & > i:nth-of-type(1) {
+        //   // z-index: 1;
+        //   position: absolute;
+        //   top: 0.4em;
+        // }
+        & > i:nth-of-type(1) {
+          display: block;
+          font-size: 1.5em;
+          position: relative;
+          background: $heart-gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+          z-index: 1;
+          opacity: 1;
+        }
+        &:active {
+          & > i:nth-of-type(2) {
+            opacity: 1;
+          }
+        }
+      }
+
+      //Cas d'un seul fa-regular
+      // .restaurants__card__body__fa__container {
+      //   font-size: 1.4em;
+      //   & > i {
+      //     position: relative;
+      //     display: inline-block;
+      //     z-index: 1;
+      //     // background-color: $primary-color;
+      //     background: $heart-gradient;
+      //     &:active {
+      //       &::after {
+      //         opacity: 1;
+      //       }
+      //     }
+      //     &::after {
+      //       content: "";
+      //       position: absolute;
+      //       opacity: 0;
+      //       z-index: -1;
+      //       background: $heart-gradient;
+      //       transition: opacity 250ms;
+      //       -webkit-transition: opacity 250ms;
+      //       -moz-transition: opacity 250ms;
+      //       -ms-transition: opacity 250ms;
+      //       -o-transition: opacity 250ms;
+      //     }
+      //   }
+      // }
       & span {
         color: $black-color;
         background-color: $tertiary-color;

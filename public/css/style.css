@@ -154,7 +154,7 @@ body {
 .restaurants__card > a {
   text-decoration: none;
 }
-.restaurants__card__img {
+.restaurants__card > a img {
   width: 100%;
   height: 13.75em;
   object-fit: cover;
@@ -184,6 +184,24 @@ body {
   text-transform: capitalize;
   font-size: 1.2em;
 }
+.restaurants__card__body .restaurants__card__body__fa__container {
+  position: relative;
+}
+.restaurants__card__body .restaurants__card__body__fa__container > i:nth-of-type(1) {
+  display: block;
+  font-size: 1.5em;
+  position: relative;
+  background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  z-index: 1;
+  opacity: 1;
+}
+.restaurants__card__body .restaurants__card__body__fa__container:active > i:nth-of-type(2) {
+  opacity: 1;
+}
 .restaurants__card__body span {
   color: #000;
   background-color: #99e2d0;
@@ -212,21 +230,17 @@ body {
   height: 15.75em;
   object-fit: cover;
   position: relative;
-  z-index: 100;
+  z-index: 1;
 }
 
 .container {
   margin-top: -3.125em;
   position: relative;
-  z-index: 200;
+  z-index: 2;
   width: 100vw;
   background-color: #f6f6f6;
   padding: 2em 1em 1em 1em;
   border-radius: 1.9em 1.9em 0 0;
-  -webkit-border-radius: 1.9em 1.9em 0 0;
-  -moz-border-radius: 1.9em 1.9em 0 0;
-  -ms-border-radius: 1.9em 1.9em 0 0;
-  -o-border-radius: 1.9em 1.9em 0 0;
 }
 .container__heading {
   display: flex;
@@ -238,20 +252,19 @@ body {
   font-size: 1.8em;
 }
 .container__heading__fa__container {
-  font-size: 1.5em;
+  position: relative;
 }
-.container__heading__fa__container:active > i {
+.container__heading__fa__container .fa-heart {
+  font-size: 1.8em;
+}
+.container__heading__fa__container .fa-regular {
   position: relative;
   z-index: 1;
-  opacity: 1;
 }
-.container__heading__fa__container:active > i::after {
-  background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+.container__heading__fa__container .fa-solid {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 5px;
+  right: 0px;
   z-index: -1;
 }
 .container__content {
@@ -316,8 +329,52 @@ body {
 .container__content__inner__btn:hover .container__content__inner__btn__body {
   width: calc(100% - 70px);
 }
+.container__content__inner__btn:hover .container__content__inner__btn__body p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .container__content__inner__btn:hover .container__content__inner__btn__check {
   right: 0;
+  animation: slide-left 0.5s;
+  transform-origin: right;
+}
+.container__content__inner__btn:hover .container__content__inner__btn__check > i {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  animation: check-rotate 0.5s 0.2s both;
+  -webkit-animation: check-rotate 0.5s 0.2s both;
+}
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(-70px);
+    -webkit-transform: scaleX(-70px);
+    -moz-transform: scaleX(-70px);
+    -ms-transform: scaleX(-70px);
+    -o-transform: scaleX(-70px);
+  }
+}
+@keyframes check-rotate {
+  0% {
+    transform: rotate(180);
+    -webkit-transform: rotate(180);
+    -moz-transform: rotate(180);
+    -ms-transform: rotate(180);
+    -o-transform: rotate(180);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
 }
 .container .btn--modify {
   width: 55%;
@@ -377,21 +434,17 @@ body {
   height: 15.75em;
   object-fit: cover;
   position: relative;
-  z-index: 100;
+  z-index: 1;
 }
 
 .container {
   margin-top: -3.125em;
   position: relative;
-  z-index: 200;
+  z-index: 2;
   width: 100vw;
   background-color: #f6f6f6;
   padding: 2em 1em 1em 1em;
   border-radius: 1.9em 1.9em 0 0;
-  -webkit-border-radius: 1.9em 1.9em 0 0;
-  -moz-border-radius: 1.9em 1.9em 0 0;
-  -ms-border-radius: 1.9em 1.9em 0 0;
-  -o-border-radius: 1.9em 1.9em 0 0;
 }
 .container__heading {
   display: flex;
@@ -403,20 +456,19 @@ body {
   font-size: 1.8em;
 }
 .container__heading__fa__container {
-  font-size: 1.5em;
+  position: relative;
 }
-.container__heading__fa__container:active > i {
+.container__heading__fa__container .fa-heart {
+  font-size: 1.8em;
+}
+.container__heading__fa__container .fa-regular {
   position: relative;
   z-index: 1;
-  opacity: 1;
 }
-.container__heading__fa__container:active > i::after {
-  background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+.container__heading__fa__container .fa-solid {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 5px;
+  right: 0px;
   z-index: -1;
 }
 .container__content {
@@ -481,8 +533,52 @@ body {
 .container__content__inner__btn:hover .container__content__inner__btn__body {
   width: calc(100% - 70px);
 }
+.container__content__inner__btn:hover .container__content__inner__btn__body p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .container__content__inner__btn:hover .container__content__inner__btn__check {
   right: 0;
+  animation: slide-left 0.5s;
+  transform-origin: right;
+}
+.container__content__inner__btn:hover .container__content__inner__btn__check > i {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  animation: check-rotate 0.5s 0.2s both;
+  -webkit-animation: check-rotate 0.5s 0.2s both;
+}
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(-70px);
+    -webkit-transform: scaleX(-70px);
+    -moz-transform: scaleX(-70px);
+    -ms-transform: scaleX(-70px);
+    -o-transform: scaleX(-70px);
+  }
+}
+@keyframes check-rotate {
+  0% {
+    transform: rotate(180);
+    -webkit-transform: rotate(180);
+    -moz-transform: rotate(180);
+    -ms-transform: rotate(180);
+    -o-transform: rotate(180);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
 }
 .container .btn--modify {
   width: 55%;

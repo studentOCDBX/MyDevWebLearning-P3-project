@@ -11,20 +11,16 @@
   height: 15.75em;
   object-fit: cover;
   position: relative;
-  z-index: 100;
+  z-index: 1;
 }
 .container {
   margin-top: -3.125em;
   position: relative;
-  z-index: 200;
+  z-index: 2;
   width: 100vw;
   background-color: $cultured-color;
   padding: 2em 1em 1em 1em;
   border-radius: 1.9em 1.9em 0 0;
-  -webkit-border-radius: 1.9em 1.9em 0 0;
-  -moz-border-radius: 1.9em 1.9em 0 0;
-  -ms-border-radius: 1.9em 1.9em 0 0;
-  -o-border-radius: 1.9em 1.9em 0 0;
   &__heading {
     @include flexBetween;
     & h1 {
@@ -32,22 +28,19 @@
       font-size: 1.8em;
     }
     &__fa__container {
-      font-size: 1.5em;
-      &:active > i {
+      position: relative;
+      & .fa-heart {
+        font-size: 1.8em;
+      }
+      & .fa-regular {
         position: relative;
         z-index: 1;
-        opacity: 1;
-
-        &::after {
-          @include heart-gradient;
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-
-          z-index: -1;
-        }
+      }
+      & .fa-solid {
+        position: absolute;
+        top: 5px;
+        right: 0px;
+        z-index: -1;
       }
     }
   }
@@ -109,12 +102,58 @@
         &:hover {
           .container__content__inner__btn__body {
             width: calc(100% - 70px);
+            & p {
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
           }
           .container__content__inner__btn__check {
             right: 0;
+            animation: slide-left 0.5s;
+            transform-origin: right;
+            & > i {
+              transform: rotate(180deg);
+              -webkit-transform: rotate(180deg);
+              -moz-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+              -o-transform: rotate(180deg);
+              animation: check-rotate 0.5s 0.2s both;
+              -webkit-animation: check-rotate 0.5s 0.2s both;
+            }
           }
         }
       }
+    }
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(-70px);
+      -webkit-transform: scaleX(-70px);
+      -moz-transform: scaleX(-70px);
+      -ms-transform: scaleX(-70px);
+      -o-transform: scaleX(-70px);
+    }
+  }
+
+  @keyframes check-rotate {
+    0% {
+      transform: rotate(180);
+      -webkit-transform: rotate(180);
+      -moz-transform: rotate(180);
+      -ms-transform: rotate(180);
+      -o-transform: rotate(180);
+    }
+    100% {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
     }
   }
   .btn--modify {
