@@ -34,6 +34,7 @@ body {
 *************
 */
 .btn, .container .btn--modify {
+  opacity: 1;
   display: inline-block;
   width: 70%;
   margin: 1em 0 1em 0;
@@ -62,6 +63,9 @@ body {
 .location p {
   font-size: 1.2rem;
 }
+.location .btn:hover, .location .container .btn--modify:hover, .container .location .btn--modify:hover {
+  background: #a16be0;
+}
 
 .presentation {
   width: 100vw;
@@ -75,6 +79,16 @@ body {
 .presentation p {
   font-size: 1.1em;
   color: #7e7e7e;
+}
+.presentation .btn:hover, .presentation .container .btn--modify:hover, .container .presentation .btn--modify:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 2px 6px 7px 4px #7e7e7e;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
 }
 
 .fonctioning {
@@ -184,23 +198,22 @@ body {
   text-transform: capitalize;
   font-size: 1.2em;
 }
-.restaurants__card__body .restaurants__card__body__fa__container {
+.restaurants__card__body .restaurants__card__body__fa__container .fa-heart {
+  display: block;
+  font-size: 29px;
+}
+.restaurants__card__body .restaurants__card__body__fa__container > .fa-regular {
+  z-index: -1;
   position: relative;
 }
-.restaurants__card__body .restaurants__card__body__fa__container > i:nth-of-type(1) {
-  display: block;
-  font-size: 1.5em;
-  position: relative;
-  background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+.restaurants__card__body .restaurants__card__body__fa__container > .fa-solid {
+  position: absolute;
+  z-index: 1;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  z-index: 1;
-  opacity: 1;
-}
-.restaurants__card__body .restaurants__card__body__fa__container:active > i:nth-of-type(2) {
-  opacity: 1;
+  color: transparent;
+  background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
 }
 .restaurants__card__body span {
   color: #000;
@@ -259,13 +272,23 @@ body {
 }
 .container__heading__fa__container .fa-regular {
   position: relative;
-  z-index: 1;
+  z-index: 4;
 }
 .container__heading__fa__container .fa-solid {
   position: absolute;
   top: 5px;
   right: 0px;
-  z-index: -1;
+  z-index: 3;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+}
+.container__heading__fa__container:hover .fa-regular {
+  z-index: 3;
+}
+.container__heading__fa__container:hover .fa-solid {
+  z-index: 4;
 }
 .container__content {
   width: 100%;
@@ -377,11 +400,22 @@ body {
   }
 }
 .container .btn--modify {
+  opacity: 1;
   width: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 3em auto;
+}
+.container .btn--modify:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 2px 6px 7px 4px #7e7e7e;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
 }
 
 /*
@@ -463,13 +497,23 @@ body {
 }
 .container__heading__fa__container .fa-regular {
   position: relative;
-  z-index: 1;
+  z-index: 4;
 }
 .container__heading__fa__container .fa-solid {
   position: absolute;
   top: 5px;
   right: 0px;
-  z-index: -1;
+  z-index: 3;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+}
+.container__heading__fa__container:hover .fa-regular {
+  z-index: 3;
+}
+.container__heading__fa__container:hover .fa-solid {
+  z-index: 4;
 }
 .container__content {
   width: 100%;
@@ -581,11 +625,22 @@ body {
   }
 }
 .container .btn--modify {
+  opacity: 1;
   width: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 3em auto;
+}
+.container .btn--modify:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 2px 6px 7px 4px #7e7e7e;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
 }
 
 /*# sourceMappingURL=style.css.map */

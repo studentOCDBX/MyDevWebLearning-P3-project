@@ -34,13 +34,25 @@
       }
       & .fa-regular {
         position: relative;
-        z-index: 1;
+        z-index: 4;
       }
       & .fa-solid {
         position: absolute;
         top: 5px;
         right: 0px;
-        z-index: -1;
+        z-index: 3;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: $heart-gradient;
+      }
+      &:hover {
+        & .fa-regular {
+          z-index: 3;
+        }
+        & .fa-solid {
+          z-index: 4;
+        }
       }
     }
   }
@@ -157,9 +169,20 @@
     }
   }
   .btn--modify {
+    opacity: 1;
     width: 55%;
     @extend .btn;
     @include flexCenter;
     margin: 3em auto;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      box-shadow: 2px 6px 7px 4px #7e7e7e;
+      transition: 300ms;
+      -webkit-transition: 300ms;
+      -moz-transition: 300ms;
+      -ms-transition: 300ms;
+      -o-transition: 300ms;
+    }
   }
 }

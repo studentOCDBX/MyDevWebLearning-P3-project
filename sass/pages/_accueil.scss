@@ -12,6 +12,11 @@
   p {
     font-size: 1.2rem;
   }
+  & .btn {
+    &:hover {
+      background: lighten($color: $primary-color, $amount: 5);
+    }
+  }
 }
 
 .presentation {
@@ -25,6 +30,16 @@
   p {
     font-size: 1.1em;
     color: $gray-color;
+  }
+  & .btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    box-shadow: 2px 6px 7px 4px #7e7e7e;
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
   }
 }
 
@@ -132,59 +147,40 @@
       }
       // Cas de deux fas (un solid et un regular
       .restaurants__card__body__fa__container {
-        position: relative;
-        // & > i:nth-of-type(1) {
-        //   // z-index: 1;
-        //   position: absolute;
-        //   top: 0.4em;
+        // & i {
+        //   width: 20px;
+        //   height: 20px;
+        //   width: 20px;
+        //   height: 20px;
         // }
-        & > i:nth-of-type(1) {
+        & .fa-heart {
           display: block;
-          font-size: 1.5em;
+          font-size: 29px;
+        }
+        & > .fa-regular {
+          z-index: -1;
           position: relative;
-          background: $heart-gradient;
+        }
+
+        & > .fa-solid {
+          position: absolute;
+          z-index: 1;
+          background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          -moz-background-clip: text;
-          -moz-text-fill-color: transparent;
-          z-index: 1;
-          opacity: 1;
+          color: transparent;
+          background: $heart-gradient;
         }
-        &:active {
-          & > i:nth-of-type(2) {
-            opacity: 1;
-          }
-        }
-      }
 
-      //Cas d'un seul fa-regular
-      // .restaurants__card__body__fa__container {
-      //   font-size: 1.4em;
-      //   & > i {
-      //     position: relative;
-      //     display: inline-block;
-      //     z-index: 1;
-      //     // background-color: $primary-color;
-      //     background: $heart-gradient;
-      //     &:active {
-      //       &::after {
-      //         opacity: 1;
-      //       }
-      //     }
-      //     &::after {
-      //       content: "";
-      //       position: absolute;
-      //       opacity: 0;
-      //       z-index: -1;
-      //       background: $heart-gradient;
-      //       transition: opacity 250ms;
-      //       -webkit-transition: opacity 250ms;
-      //       -moz-transition: opacity 250ms;
-      //       -ms-transition: opacity 250ms;
-      //       -o-transition: opacity 250ms;
-      //     }
-      //   }
-      // }
+        // &:hover {
+        //   & > i:nth-of-type(1) {
+        //     z-index: -1;
+        //   }
+        //   & > i:nth-of-type(2) {
+        //     z-index: 1;
+        //   }
+        // }
+      }
       & span {
         color: $black-color;
         background-color: $tertiary-color;
