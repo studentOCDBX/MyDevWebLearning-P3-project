@@ -15,3 +15,12 @@ $heart-gradient: linear-gradient(
   rgba(147, 86, 220, 1) 0%,
   rgba(255, 121, 218, 1) 100%
 );
+
+$breakpoints-min: (
+  tablets: 768px,
+  desktop: 1200px,
+);
+$breakpoints-max: (
+  tablets: 1199px,
+  desktop: 1440px,
+);

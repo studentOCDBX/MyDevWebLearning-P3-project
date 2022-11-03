@@ -49,6 +49,80 @@ body {
   -o-border-radius: 1.6em;
 }
 
+.loader-container {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: #fff;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 7px solid transparent;
+  border-top-color: #9356dc;
+  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+}
+.loader::before, .loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 7px solid transparent;
+}
+.loader::before {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-top-color: #ff79da;
+  animation: spin 3s linear infinite;
+  -webkit-animation: spin 3s linear infinite;
+}
+.loader::after {
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+  border-top-color: #99e2d0;
+  animation: spin 1.5s linear infinite;
+  -webkit-animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
 .location {
   width: 100vw;
   height: 8%;
@@ -89,6 +163,11 @@ body {
   -moz-transition: 300ms;
   -ms-transition: 300ms;
   -o-transition: 300ms;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .presentation .btn, .presentation .container .btn--modify, .container .presentation .btn--modify {
+    width: 25%;
+  }
 }
 
 .fonctioning {
@@ -143,6 +222,23 @@ body {
 .fonctioning__btn > p {
   color: #000;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .fonctioning {
+    display: flex;
+    flex-direction: column;
+  }
+  .fonctioning__heading {
+    text-align: center;
+  }
+  .fonctioning__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .fonctioning__btn {
+    width: 30%;
+  }
 }
 
 .restaurants {
@@ -213,7 +309,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
 }
 .restaurants__card__body span {
   color: #000;
@@ -226,6 +322,27 @@ body {
 }
 .restaurants__card__body span.--span-none {
   display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+  }
+  .restaurants__heading {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 24px;
+  }
+  .restaurants__inner {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurants__card {
+    width: 45%;
+    margin-left: 16px;
+  }
 }
 
 .header--modfy {
@@ -446,6 +563,17 @@ body {
 }
 .footer ul li a.--padding-left-none {
   padding-left: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 16vh;
+  }
+  .footer ul {
+    padding-top: 16px;
+  }
 }
 
 /*
