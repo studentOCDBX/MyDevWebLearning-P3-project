@@ -11,13 +11,13 @@
   height: 15.75em;
   object-fit: cover;
   position: relative;
-  z-index: 1;
+  z-index: -1;
 }
 .container {
+  width: 100%;
   margin-top: -3.125em;
   position: relative;
-  z-index: 2;
-  width: 100vw;
+  z-index: 1;
   background-color: $cultured-color;
   padding: 2em 1em 1em 1em;
   border-radius: 1.9em 1.9em 0 0;
@@ -32,26 +32,37 @@
       & .fa-heart {
         font-size: 1.8em;
       }
-      & .fa-regular {
-        position: relative;
-        z-index: 4;
-      }
+
       & .fa-solid {
         position: absolute;
-        top: 5px;
-        right: 0px;
-        z-index: 3;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        cursor: pointer;
         background-clip: text;
         -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         color: transparent;
         background-image: $heart-gradient;
+        transform: translateY(75%);
+        -webkit-transform: translateY(75%);
+        -moz-transform: translateY(75%);
+        -ms-transform: translateY(75%);
+        -o-transform: translateY(75%);
+        transition: translate 400ms opacity 200ms ease;
+        -webkit-transition: translate 400ms opacity 200ms ease;
+        -moz-transition: translate 400ms opacity 200ms ease;
+        -ms-transition: translate 400ms opacity 200ms ease;
+        -o-transition: translate 400ms opacity 200ms ease;
       }
       &:hover {
-        & .fa-regular {
-          z-index: 3;
-        }
         & .fa-solid {
-          z-index: 4;
+          opacity: 1;
+          transform: translateY(0);
+          -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0);
         }
       }
     }
@@ -89,6 +100,9 @@
         -webkit-border-radius: 1.2em;
         & h3 {
           margin: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
         &__body {
           @include flexBetween;
@@ -111,7 +125,7 @@
             color: #fff;
           }
         }
-        &:hover {
+        &:active {
           .container__content__inner__btn__body {
             width: calc(100% - 70px);
             & p {
@@ -183,6 +197,24 @@
       -moz-transition: 300ms;
       -ms-transition: 300ms;
       -o-transition: 300ms;
+    }
+  }
+  @include breakpoint(tablets) {
+    &__content {
+      width: 100%;
+      @include flexEvenly;
+      &__inner {
+        width: 30%;
+        margin-left: 2%;
+      }
+      &__inner__btn__body > p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+    .btn--modify {
+      width: 30%;
     }
   }
 }

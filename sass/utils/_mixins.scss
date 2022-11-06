@@ -23,6 +23,12 @@
   @include dFlex;
   flex-direction: column;
 }
+@mixin flexColumnCenter {
+  @include dFlex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 @mixin flexEvenly {
   @include dFlex;
   justify-content: space-evenly;
