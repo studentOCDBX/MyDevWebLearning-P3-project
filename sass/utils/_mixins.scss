@@ -48,8 +48,12 @@
   @if not map-has-key($breakpoints-min, $name) {
     @warn "Warning: `#{$name}` is not a valid breakpoint name.";
   } @else {
-    @media screen and (min-width: map-get($breakpoints-min, $name)) and (max-width: map-get($breakpoints-max, $name)) {
+    @media screen and (min-width: map-get($breakpoints-min, $name))  {
       @content;
     }
   }
 }
+
+// @media screen and (min-width: map-get($breakpoints-min, $name)) and (max-width: map-get($breakpoints-max, $name)) {
+//       @content;
+//     }

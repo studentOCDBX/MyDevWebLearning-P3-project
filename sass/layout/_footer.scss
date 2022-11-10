@@ -23,7 +23,7 @@
   }
   @include breakpoint(tablets) {
     @include flexAround;
-    height: 16vh;
+    // height: 16vh;
 
     ul {
       padding-top: 16px;
