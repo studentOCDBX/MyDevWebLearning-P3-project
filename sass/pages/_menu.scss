@@ -30,7 +30,7 @@
     &__fa__container {
       position: relative;
       & .fa-heart {
-        font-size: 1.8em;
+        font-size: 1.9em;
       }
 
       & .fa-solid {
@@ -49,11 +49,11 @@
         -moz-transform: translateY(75%);
         -ms-transform: translateY(75%);
         -o-transform: translateY(75%);
-        transition: translate 400ms opacity 200ms ease;
-        -webkit-transition: translate 400ms opacity 200ms ease;
-        -moz-transition: translate 400ms opacity 200ms ease;
-        -ms-transition: translate 400ms opacity 200ms ease;
-        -o-transition: translate 400ms opacity 200ms ease;
+        transition: translate 400ms, opacity 200ms, ease;
+        -webkit-transition: translate 400ms, opacity 200ms, ease;
+        -moz-transition: translate 400ms, opacity 200ms, ease;
+        -ms-transition: translate 400ms, opacity 200ms, ease;
+        -o-transition: translate 400ms, opacity 200ms, ease;
       }
       &:hover {
         & .fa-solid {
@@ -72,6 +72,7 @@
     width: 100%;
     &__inner {
       width: 100%;
+
       & > h2 {
         text-transform: uppercase;
         font-size: 1.2em;
@@ -85,6 +86,12 @@
         }
       }
       &__btn {
+        $numberOfItems: 4;
+        @for $i from 1 through $numberOfItems {
+          &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+          }
+        }
         position: relative;
         overflow: hidden;
         cursor: pointer;
@@ -98,6 +105,8 @@
         -ms-border-radius: 1.5em;
         -o-border-radius: 1.5em;
         -webkit-border-radius: 1.2em;
+        transform-origin: left;
+        animation: appearance 500ms 150ms both;
         & h3 {
           margin: 0;
           overflow: hidden;
@@ -153,26 +162,49 @@
     }
   }
 
-  @keyframes slide-left {
+  @keyframes appearance {
     0% {
-      transform: scaleX(0);
+      transform: translateY(50%);
+      -webkit-transform: translateY(50%);
+      -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+      -o-transform: translateY(50%);
+      opacity: 0;
     }
     100% {
-      transform: scaleX(-70px);
-      -webkit-transform: scaleX(-70px);
-      -moz-transform: scaleX(-70px);
-      -ms-transform: scaleX(-70px);
-      -o-transform: scaleX(-70px);
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(50%);
+      -webkit-transform: translateX(50%);
+      -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+      -o-transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
     }
   }
 
   @keyframes check-rotate {
     0% {
-      transform: rotate(180);
-      -webkit-transform: rotate(180);
-      -moz-transform: rotate(180);
-      -ms-transform: rotate(180);
-      -o-transform: rotate(180);
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
     }
     100% {
       transform: rotate(360deg);
@@ -206,6 +238,30 @@
       &__inner {
         width: 30%;
         margin-left: 2%;
+      }
+      &__inner__btn:hover {
+        .container__content__inner__btn__body {
+          width: calc(100% - 70px);
+          & p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+        .container__content__inner__btn__check {
+          right: 0;
+          animation: slide-left 0.5s;
+          transform-origin: right;
+          & > i {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            animation: check-rotate 0.5s 0.2s both;
+            -webkit-animation: check-rotate 0.5s 0.2s both;
+          }
+        }
       }
       &__inner__btn__body > p {
         overflow: hidden;

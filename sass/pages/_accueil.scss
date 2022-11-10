@@ -78,20 +78,16 @@
   }
 }
 
-.header {
-  width: 100%;
-}
-
 .location {
   width: 100%;
   height: 8%;
   background-color: rgba($whisper-color, 0.78);
   @include flexCenter;
   &__fa {
-    padding-right: 24px;
+    margin-right: 24px;
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -107,73 +103,81 @@
     font-size: 1.1em;
     color: $gray-color;
   }
-  & .btn:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    box-shadow: 2px 6px 7px 4px #7e7e7e;
-    transition: 300ms;
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -ms-transition: 300ms;
-    -o-transition: 300ms;
+  & .btn {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      box-shadow: 2px 6px 7px 4px #7e7e7e;
+      transition: 300ms;
+      -webkit-transition: 300ms;
+      -moz-transition: 300ms;
+      -ms-transition: 300ms;
+      -o-transition: 300ms;
+    }
   }
   @include breakpoint(tablets) {
     .btn {
-      width: 30%;
+      width: 35%;
     }
   }
 }
-
 .fonctioning {
   width: 100%;
   padding: 1.5em;
   background-color: $white-color;
-
+  color: $black-color;
   &__heading {
     text-transform: capitalize;
   }
-  &__inner {
-    @include flexColumnCenter;
-  }
-  &__btn {
-    width: 90%;
-    padding: 1em 0 1em 0;
-    margin-bottom: 1.5em;
-    color: $black-color;
-    background-color: $cultured-color;
-    @include flexStart;
-    border-radius: 1.5em;
-    -webkit-border-radius: 1.5em;
-    -moz-border-radius: 1.5em;
-    -ms-border-radius: 1.5em;
-    -o-border-radius: 1.5em;
-    @include shadow($whisper-color);
-    &__number {
-      @include flexCenter;
-      width: 1.7em;
-      height: 1.7em;
-      border-radius: 1.25em;
-      color: $white-color;
-      margin-left: -4%;
-      background-color: $primary-color;
-      -webkit-border-radius: 1.25em;
-      -moz-border-radius: 1.25em;
-      -ms-border-radius: 1.25em;
-      -o-border-radius: 1.25em;
-    }
-    &--magnolia {
-      background-color: $magnolia-color;
-    }
-    &__i {
-      margin: 0px 24px 0 24px;
-      color: $gray-color;
-      &--indigo {
-        color: $primary-color;
+  & ol {
+    padding: 0;
+    counter-reset: number;
+    width: 100%;
+    list-style-type: none;
+
+    & li {
+      position: relative;
+      width: 100%;
+      @include flexStart;
+      padding: 1.5em;
+      background-color: $cultured-color;
+      font-size: 1.2em;
+      font-weight: 500;
+      margin-bottom: 1em;
+      border-radius: 1.3em;
+      -webkit-border-radius: 1.3em;
+      -moz-border-radius: 1.3em;
+      -ms-border-radius: 1.3em;
+      -o-border-radius: 1.3em;
+      @include shadow($whisper-color);
+      &::before {
+        counter-increment: number;
+        content: counter(number);
+        @include flexCenter;
+        color: $white-color;
+        position: absolute;
+        left: -1 * $steps-hight;
+        width: 1 + $steps-hight;
+        height: 1 + $steps-hight;
+        background-color: $primary-color;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
       }
-    }
-    & > p {
-      color: $black-color;
-      font-weight: 600;
+      & i {
+        font-size: 1.2em;
+        color: $gray-color;
+        margin: 0 1em 0 0.5em;
+        &.imagnolia {
+          color: $primary-color;
+        }
+      }
+
+      &.magnolia {
+        background-color: $magnolia-color;
+      }
     }
   }
   @include breakpoint(tablets) {
@@ -181,27 +185,11 @@
     &__heading {
       text-align: center;
     }
-    &__inner {
-      width: 100%;
-      flex-direction: row;
+    & ol {
       @include flexAround;
-    }
-    &__btn {
-      width: 30%;
-    }
-  }
-  @include breakpoint(desktop) {
-    @include flexColumn;
-    &__heading {
-      text-align: center;
-    }
-    &__inner {
-      width: 100%;
-      flex-direction: row;
-      @include flexAround;
-    }
-    &__btn {
-      width: 30%;
+      li {
+        width: 30%;
+      }
     }
   }
 }
@@ -257,7 +245,6 @@
           font-size: 1.2em;
         }
       }
-      // Cas de deux fas (un solid et un regular
       .restaurants__card__body__fa__container {
         position: relative;
         & .fa-heart {
@@ -275,8 +262,13 @@
           color: transparent;
           background-image: $heart-gradient;
           opacity: 0;
-          // animation: heart 800ms both;
-          // -webkit-animation: heart 800ms both;
+          transition: all 200ms ease-in-out;
+          -webkit-transition: all 200ms ease-in-out;
+          -moz-transition: all 200ms ease-in-out;
+          -ms-transition: all 200ms ease-in-out;
+          -o-transition: all 200ms ease-in-out;
+          //animation: heart 800ms both;
+          //-webkit-animation: heart 800ms both;
         }
 
         &:active {
@@ -306,7 +298,7 @@
         position: absolute;
         top: 1em;
         right: 1em;
-        &.--span-none {
+        &.spanNone {
           display: none;
         }
       }

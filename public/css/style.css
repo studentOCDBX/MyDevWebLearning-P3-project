@@ -18,7 +18,7 @@ body {
 *************
 */
 .header {
-  width: 100vw;
+  width: 100%;
   height: 10%;
   box-shadow: 0px 2px 0px 1px #7e7e7e;
   display: flex;
@@ -124,10 +124,6 @@ body {
     -o-transform: rotate(360deg);
   }
 }
-.header {
-  width: 100%;
-}
-
 .location {
   width: 100%;
   height: 8%;
@@ -137,10 +133,10 @@ body {
   align-items: center;
 }
 .location__fa {
-  padding-right: 24px;
+  margin-right: 24px;
 }
 .location p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .presentation {
@@ -168,7 +164,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .presentation .btn, .presentation .container .btn--modify, .container .presentation .btn--modify {
-    width: 30%;
+    width: 35%;
   }
 }
 
@@ -176,60 +172,63 @@ body {
   width: 100%;
   padding: 1.5em;
   background-color: #fff;
+  color: #000;
 }
 .fonctioning__heading {
   text-transform: capitalize;
 }
-.fonctioning__inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.fonctioning ol {
+  padding: 0;
+  counter-reset: number;
+  width: 100%;
+  list-style-type: none;
 }
-.fonctioning__btn {
-  width: 90%;
-  padding: 1em 0 1em 0;
-  margin-bottom: 1.5em;
-  color: #000;
-  background-color: #f6f6f6;
+.fonctioning ol li {
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 1.5em;
-  -webkit-border-radius: 1.5em;
-  -moz-border-radius: 1.5em;
-  -ms-border-radius: 1.5em;
-  -o-border-radius: 1.5em;
+  padding: 1.5em;
+  background-color: #f6f6f6;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  border-radius: 1.3em;
+  -webkit-border-radius: 1.3em;
+  -moz-border-radius: 1.3em;
+  -ms-border-radius: 1.3em;
+  -o-border-radius: 1.3em;
   box-shadow: 2px 6px 12px 0 #e5e5e5;
 }
-.fonctioning__btn__number {
+.fonctioning ol li::before {
+  counter-increment: number;
+  content: counter(number);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1.7em;
-  height: 1.7em;
-  border-radius: 1.25em;
   color: #fff;
-  margin-left: -4%;
+  position: absolute;
+  left: -0.8em;
+  width: 1.8em;
+  height: 1.8em;
   background-color: #9356dc;
-  -webkit-border-radius: 1.25em;
-  -moz-border-radius: 1.25em;
-  -ms-border-radius: 1.25em;
-  -o-border-radius: 1.25em;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
-.fonctioning__btn--magnolia {
-  background-color: #f5edff;
-}
-.fonctioning__btn__i {
-  margin: 0px 24px 0 24px;
+.fonctioning ol li i {
+  font-size: 1.2em;
   color: #7e7e7e;
+  margin: 0 1em 0 0.5em;
 }
-.fonctioning__btn__i--indigo {
+.fonctioning ol li i.imagnolia {
   color: #9356dc;
 }
-.fonctioning__btn > p {
-  color: #000;
-  font-weight: 600;
+.fonctioning ol li.magnolia {
+  background-color: #f5edff;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .fonctioning {
@@ -239,33 +238,12 @@ body {
   .fonctioning__heading {
     text-align: center;
   }
-  .fonctioning__inner {
-    width: 100%;
-    flex-direction: row;
+  .fonctioning ol {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  .fonctioning__btn {
-    width: 30%;
-  }
-}
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
-  .fonctioning {
-    display: flex;
-    flex-direction: column;
-  }
-  .fonctioning__heading {
-    text-align: center;
-  }
-  .fonctioning__inner {
-    width: 100%;
-    flex-direction: row;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .fonctioning__btn {
+  .fonctioning ol li {
     width: 30%;
   }
 }
@@ -340,6 +318,11 @@ body {
   color: transparent;
   background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   opacity: 0;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
 }
 .restaurants__card__body .restaurants__card__body__fa__container:active > i:nth-of-type(2) {
   opacity: 1;
@@ -353,7 +336,7 @@ body {
   top: 1em;
   right: 1em;
 }
-.restaurants__card__body span.--span-none {
+.restaurants__card__body span.spanNone {
   display: none;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -450,7 +433,7 @@ body {
   position: relative;
 }
 .container__heading__fa__container .fa-heart {
-  font-size: 1.8em;
+  font-size: 1.9em;
 }
 .container__heading__fa__container .fa-solid {
   position: absolute;
@@ -468,11 +451,11 @@ body {
   -moz-transform: translateY(75%);
   -ms-transform: translateY(75%);
   -o-transform: translateY(75%);
-  transition: translate 400ms opacity 200ms ease;
-  -webkit-transition: translate 400ms opacity 200ms ease;
-  -moz-transition: translate 400ms opacity 200ms ease;
-  -ms-transition: translate 400ms opacity 200ms ease;
-  -o-transition: translate 400ms opacity 200ms ease;
+  transition: translate 400ms, opacity 200ms, ease;
+  -webkit-transition: translate 400ms, opacity 200ms, ease;
+  -moz-transition: translate 400ms, opacity 200ms, ease;
+  -ms-transition: translate 400ms, opacity 200ms, ease;
+  -o-transition: translate 400ms, opacity 200ms, ease;
 }
 .container__heading__fa__container:hover .fa-solid {
   opacity: 1;
@@ -514,6 +497,20 @@ body {
   -ms-border-radius: 1.5em;
   -o-border-radius: 1.5em;
   -webkit-border-radius: 1.2em;
+  transform-origin: left;
+  animation: appearance 500ms 150ms both;
+}
+.container__content__inner__btn:nth-child(1) {
+  animation-delay: 100ms;
+}
+.container__content__inner__btn:nth-child(2) {
+  animation-delay: 200ms;
+}
+.container__content__inner__btn:nth-child(3) {
+  animation-delay: 300ms;
+}
+.container__content__inner__btn:nth-child(4) {
+  animation-delay: 400ms;
 }
 .container__content__inner__btn h3 {
   margin: 0;
@@ -566,25 +563,47 @@ body {
   animation: check-rotate 0.5s 0.2s both;
   -webkit-animation: check-rotate 0.5s 0.2s both;
 }
-@keyframes slide-left {
+@keyframes appearance {
   0% {
-    transform: scaleX(0);
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    opacity: 0;
   }
   100% {
-    transform: scaleX(-70px);
-    -webkit-transform: scaleX(-70px);
-    -moz-transform: scaleX(-70px);
-    -ms-transform: scaleX(-70px);
-    -o-transform: scaleX(-70px);
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
 }
 @keyframes check-rotate {
   0% {
-    transform: rotate(180);
-    -webkit-transform: rotate(180);
-    -moz-transform: rotate(180);
-    -ms-transform: rotate(180);
-    -o-transform: rotate(180);
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
   }
   100% {
     transform: rotate(360deg);
@@ -623,6 +642,28 @@ body {
     width: 30%;
     margin-left: 2%;
   }
+  .container__content__inner__btn:hover .container__content__inner__btn__body {
+    width: calc(100% - 70px);
+  }
+  .container__content__inner__btn:hover .container__content__inner__btn__body p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .container__content__inner__btn:hover .container__content__inner__btn__check {
+    right: 0;
+    animation: slide-left 0.5s;
+    transform-origin: right;
+  }
+  .container__content__inner__btn:hover .container__content__inner__btn__check > i {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    animation: check-rotate 0.5s 0.2s both;
+    -webkit-animation: check-rotate 0.5s 0.2s both;
+  }
   .container__content__inner__btn__body > p {
     overflow: hidden;
     white-space: nowrap;
@@ -659,7 +700,7 @@ body {
   text-decoration: none;
   padding: 1em;
 }
-.footer ul li a.--padding-left-none {
+.footer ul li a.padding-left-none {
   padding-left: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -719,7 +760,7 @@ body {
   position: relative;
 }
 .container__heading__fa__container .fa-heart {
-  font-size: 1.8em;
+  font-size: 1.9em;
 }
 .container__heading__fa__container .fa-solid {
   position: absolute;
@@ -737,11 +778,11 @@ body {
   -moz-transform: translateY(75%);
   -ms-transform: translateY(75%);
   -o-transform: translateY(75%);
-  transition: translate 400ms opacity 200ms ease;
-  -webkit-transition: translate 400ms opacity 200ms ease;
-  -moz-transition: translate 400ms opacity 200ms ease;
-  -ms-transition: translate 400ms opacity 200ms ease;
-  -o-transition: translate 400ms opacity 200ms ease;
+  transition: translate 400ms, opacity 200ms, ease;
+  -webkit-transition: translate 400ms, opacity 200ms, ease;
+  -moz-transition: translate 400ms, opacity 200ms, ease;
+  -ms-transition: translate 400ms, opacity 200ms, ease;
+  -o-transition: translate 400ms, opacity 200ms, ease;
 }
 .container__heading__fa__container:hover .fa-solid {
   opacity: 1;
@@ -783,6 +824,20 @@ body {
   -ms-border-radius: 1.5em;
   -o-border-radius: 1.5em;
   -webkit-border-radius: 1.2em;
+  transform-origin: left;
+  animation: appearance 500ms 150ms both;
+}
+.container__content__inner__btn:nth-child(1) {
+  animation-delay: 100ms;
+}
+.container__content__inner__btn:nth-child(2) {
+  animation-delay: 200ms;
+}
+.container__content__inner__btn:nth-child(3) {
+  animation-delay: 300ms;
+}
+.container__content__inner__btn:nth-child(4) {
+  animation-delay: 400ms;
 }
 .container__content__inner__btn h3 {
   margin: 0;
@@ -835,25 +890,47 @@ body {
   animation: check-rotate 0.5s 0.2s both;
   -webkit-animation: check-rotate 0.5s 0.2s both;
 }
-@keyframes slide-left {
+@keyframes appearance {
   0% {
-    transform: scaleX(0);
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    opacity: 0;
   }
   100% {
-    transform: scaleX(-70px);
-    -webkit-transform: scaleX(-70px);
-    -moz-transform: scaleX(-70px);
-    -ms-transform: scaleX(-70px);
-    -o-transform: scaleX(-70px);
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
 }
 @keyframes check-rotate {
   0% {
-    transform: rotate(180);
-    -webkit-transform: rotate(180);
-    -moz-transform: rotate(180);
-    -ms-transform: rotate(180);
-    -o-transform: rotate(180);
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
   }
   100% {
     transform: rotate(360deg);
@@ -891,6 +968,28 @@ body {
   .container__content__inner {
     width: 30%;
     margin-left: 2%;
+  }
+  .container__content__inner__btn:hover .container__content__inner__btn__body {
+    width: calc(100% - 70px);
+  }
+  .container__content__inner__btn:hover .container__content__inner__btn__body p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .container__content__inner__btn:hover .container__content__inner__btn__check {
+    right: 0;
+    animation: slide-left 0.5s;
+    transform-origin: right;
+  }
+  .container__content__inner__btn:hover .container__content__inner__btn__check > i {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    animation: check-rotate 0.5s 0.2s both;
+    -webkit-animation: check-rotate 0.5s 0.2s both;
   }
   .container__content__inner__btn__body > p {
     overflow: hidden;
