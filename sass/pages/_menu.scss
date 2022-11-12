@@ -8,7 +8,7 @@
 
 .banner__img > img {
   width: 100%;
-  height: 15.75em;
+  height: 30em;
   object-fit: cover;
   position: relative;
   z-index: -1;
@@ -32,37 +32,26 @@
       & .fa-heart {
         font-size: 1.9em;
       }
-
       & .fa-solid {
+        cursor: pointer;
         position: absolute;
         bottom: 0;
         right: 0;
         opacity: 0;
-        cursor: pointer;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
         background-image: $heart-gradient;
-        transform: translateY(75%);
-        -webkit-transform: translateY(75%);
-        -moz-transform: translateY(75%);
-        -ms-transform: translateY(75%);
-        -o-transform: translateY(75%);
-        transition: translate 400ms, opacity 200ms, ease;
-        -webkit-transition: translate 400ms, opacity 200ms, ease;
-        -moz-transition: translate 400ms, opacity 200ms, ease;
-        -ms-transition: translate 400ms, opacity 200ms, ease;
-        -o-transition: translate 400ms, opacity 200ms, ease;
+        transition: opacity 200ms, ease-in-out;
+        -webkit-transition: opacity 200ms, ease-in-out;
+        -moz-transition: opacity 200ms, ease-in-out;
+        -ms-transition: opacity 200ms, ease-in-out;
+        -o-transition: opacity 200ms, ease-in-out;
       }
       &:hover {
         & .fa-solid {
           opacity: 1;
-          transform: translateY(0);
-          -webkit-transform: translateY(0);
-          -moz-transform: translateY(0);
-          -ms-transform: translateY(0);
-          -o-transform: translateY(0);
         }
       }
     }

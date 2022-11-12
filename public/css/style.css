@@ -6,6 +6,7 @@
 html,
 body {
   font-family: "Roboto", sans-serif;
+  width: 100%;
   height: 100vh;
   margin: 0 auto;
   padding: 0;
@@ -52,9 +53,12 @@ body {
 
 .loader__container {
   position: fixed;
-  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   height: 100vh;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -328,19 +332,18 @@ body {
   position: relative;
 }
 .restaurants__card__body .restaurants__card__body__fa__container .fa-heart {
-  display: block;
-  font-size: 2.5em;
+  font-size: 1.9em;
 }
 .restaurants__card__body .restaurants__card__body__fa__container > .fa-solid {
   position: absolute;
   bottom: 0;
   right: 0;
+  opacity: 0;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
   background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  opacity: 0;
   transition: all 200ms ease-in-out;
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
@@ -379,7 +382,7 @@ body {
     align-items: center;
   }
   .restaurants__card {
-    width: 45%;
+    width: 35%;
     margin-left: 16px;
   }
 }
@@ -396,7 +399,7 @@ body {
 
 .banner__img > img {
   width: 100%;
-  height: 15.75em;
+  height: 30em;
   object-fit: cover;
   position: relative;
   z-index: -1;
@@ -427,34 +430,24 @@ body {
   font-size: 1.9em;
 }
 .container__heading__fa__container .fa-solid {
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   right: 0;
   opacity: 0;
-  cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
   background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  transform: translateY(75%);
-  -webkit-transform: translateY(75%);
-  -moz-transform: translateY(75%);
-  -ms-transform: translateY(75%);
-  -o-transform: translateY(75%);
-  transition: translate 400ms, opacity 200ms, ease;
-  -webkit-transition: translate 400ms, opacity 200ms, ease;
-  -moz-transition: translate 400ms, opacity 200ms, ease;
-  -ms-transition: translate 400ms, opacity 200ms, ease;
-  -o-transition: translate 400ms, opacity 200ms, ease;
+  transition: opacity 200ms, ease-in-out;
+  -webkit-transition: opacity 200ms, ease-in-out;
+  -moz-transition: opacity 200ms, ease-in-out;
+  -ms-transition: opacity 200ms, ease-in-out;
+  -o-transition: opacity 200ms, ease-in-out;
 }
 .container__heading__fa__container:hover .fa-solid {
   opacity: 1;
-  transform: translateY(0);
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
 }
 .container__content {
   width: 100%;
@@ -722,7 +715,7 @@ body {
 
 .banner__img > img {
   width: 100%;
-  height: 15.75em;
+  height: 30em;
   object-fit: cover;
   position: relative;
   z-index: -1;
@@ -753,34 +746,24 @@ body {
   font-size: 1.9em;
 }
 .container__heading__fa__container .fa-solid {
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   right: 0;
   opacity: 0;
-  cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
   background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  transform: translateY(75%);
-  -webkit-transform: translateY(75%);
-  -moz-transform: translateY(75%);
-  -ms-transform: translateY(75%);
-  -o-transform: translateY(75%);
-  transition: translate 400ms, opacity 200ms, ease;
-  -webkit-transition: translate 400ms, opacity 200ms, ease;
-  -moz-transition: translate 400ms, opacity 200ms, ease;
-  -ms-transition: translate 400ms, opacity 200ms, ease;
-  -o-transition: translate 400ms, opacity 200ms, ease;
+  transition: opacity 200ms, ease-in-out;
+  -webkit-transition: opacity 200ms, ease-in-out;
+  -moz-transition: opacity 200ms, ease-in-out;
+  -ms-transition: opacity 200ms, ease-in-out;
+  -o-transition: opacity 200ms, ease-in-out;
 }
 .container__heading__fa__container:hover .fa-solid {
   opacity: 1;
-  transform: translateY(0);
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
 }
 .container__content {
   width: 100%;

@@ -3,9 +3,12 @@
 
 .loader__container {
   position: fixed;
-  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   height: 100vh;
-  margin: 0 auto;
+  width: 100%;
   @include flexCenter;
   z-index: 3;
   opacity: 0.9;
@@ -34,7 +37,6 @@
   border-top-color: $primary-color;
   animation: spin 2s linear infinite;
   -webkit-animation: spin 2s linear infinite;
-  // background: $black-color;
   &::before,
   &::after {
     content: "";
@@ -54,7 +56,6 @@
     border-top-color: $secondary-color;
     animation: spin 3s linear infinite;
     -webkit-animation: spin 3s linear infinite;
-    //background: green;
   }
 
   &::after {
@@ -65,7 +66,6 @@
     border-top-color: $tertiary-color;
     animation: spin 1.5s linear infinite;
     -webkit-animation: spin 1.5s linear infinite;
-    //background: $magnolia-color;
   }
 }
 @keyframes spin {
@@ -271,27 +271,23 @@
       .restaurants__card__body__fa__container {
         position: relative;
         & .fa-heart {
-          display: block;
-          font-size: 2.5em;
+          font-size: 1.9em;
         }
-
         & > .fa-solid {
           position: absolute;
           bottom: 0;
           right: 0;
+          opacity: 0;
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           color: transparent;
           background-image: $heart-gradient;
-          opacity: 0;
           transition: all 200ms ease-in-out;
           -webkit-transition: all 200ms ease-in-out;
           -moz-transition: all 200ms ease-in-out;
           -ms-transition: all 200ms ease-in-out;
           -o-transition: all 200ms ease-in-out;
-          //animation: heart 800ms both;
-          //-webkit-animation: heart 800ms both;
         }
 
         &:active {
@@ -299,19 +295,6 @@
             opacity: 1;
           }
         }
-        // @keyframes heart {
-        //   0% {
-        //     -webkit-transform: translateY(-50%);
-        //     transform: translateY(0);
-        //   }
-        //   100% {
-        //     transform: translateY(0);
-        //     -webkit-transform: translateY(0);
-        //     -moz-transform: translateY(0);
-        //     -ms-transform: translateY(0);
-        //     -o-transform: translateY(0);
-        //   }
-        // }
       }
       & span {
         color: $black-color;
@@ -339,36 +322,8 @@
       @include flexCenter;
     }
     &__card {
-      width: 45%;
+      width: 35%;
       margin-left: 16px;
     }
   }
-  // @include breakpoint(desktop) {
-  //   &__heading {
-  //     text-align: center;
-  //     margin: 0;
-  //     padding-bottom: 24px;
-  //   }
-  //   &__inner {
-  //     flex-wrap: wrap;
-  //     @include flexCenter;
-  //   }
-  //   &__card {
-  //     width: 45%;
-  //     margin-left: 16px;
-  //   }
-  //   &__heading {
-  //     text-align: center;
-  //     margin: 0;
-  //     padding-bottom: 24px;
-  //   }
-  //   &__inner {
-  //     flex-wrap: wrap;
-  //     @include flexCenter;
-  //   }
-  //   &__card {
-  //     width: 45%;
-  //     margin-left: 16px;
-  //   }
-  // }
 }
