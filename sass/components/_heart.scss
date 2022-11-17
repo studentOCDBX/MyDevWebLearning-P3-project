@@ -1,0 +1,39 @@
+.fa__container {
+  position: relative;
+  & .fa-heart {
+    font-size: 1.9em;
+  }
+  & .fa-solid {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-image: $heart-gradient;
+    transform-origin: bottom;
+    transition: opacity 200ms, ease-in-out;
+    -webkit-transition: opacity 200ms, ease-in-out;
+    -moz-transition: opacity 200ms, ease-in-out;
+    -ms-transition: opacity 200ms, ease-in-out;
+    -o-transition: opacity 200ms, ease-in-out;
+  }
+  &:hover {
+    & .fa-solid {
+      opacity: 1;
+      animation: heart 300ms ease-in-out;
+      -webkit-animation: heart 300ms ease-in-out;
+    }
+  }
+}
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

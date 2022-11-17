@@ -13,6 +13,44 @@ body {
   max-width: 1440px;
 }
 
+.fa__container {
+  position: relative;
+}
+.fa__container .fa-heart {
+  font-size: 1.9em;
+}
+.fa__container .fa-solid {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  transform-origin: bottom;
+  transition: opacity 200ms, ease-in-out;
+  -webkit-transition: opacity 200ms, ease-in-out;
+  -moz-transition: opacity 200ms, ease-in-out;
+  -ms-transition: opacity 200ms, ease-in-out;
+  -o-transition: opacity 200ms, ease-in-out;
+}
+.fa__container:hover .fa-solid {
+  opacity: 1;
+  animation: heart 300ms ease-in-out;
+  -webkit-animation: heart 300ms ease-in-out;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*
 *************
 	HEADER
@@ -328,31 +366,6 @@ body {
   text-transform: capitalize;
   font-size: 1.2em;
 }
-.restaurants__card__body__fa__container {
-  position: relative;
-}
-.restaurants__card__body__fa__container .fa-heart {
-  font-size: 1.9em;
-}
-.restaurants__card__body__fa__container > .fa-solid {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  transition: all 200ms ease-in-out;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-}
-.restaurants__card__body__fa__container:active > i:nth-of-type(2) {
-  opacity: 1;
-}
 .restaurants__card__body span {
   color: #000;
   background-color: #99e2d0;
@@ -431,43 +444,6 @@ body {
 .container__heading h1 {
   font-family: "Shrikhand";
   font-size: 1.8em;
-}
-.container__heading__fa__container {
-  position: relative;
-}
-.container__heading__fa__container .fa-heart {
-  font-size: 1.9em;
-}
-.container__heading__fa__container .fa-solid {
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  transform-origin: bottom;
-  transition: opacity 200ms, ease-in-out;
-  -webkit-transition: opacity 200ms, ease-in-out;
-  -moz-transition: opacity 200ms, ease-in-out;
-  -ms-transition: opacity 200ms, ease-in-out;
-  -o-transition: opacity 200ms, ease-in-out;
-}
-.container__heading__fa__container:hover .fa-solid {
-  opacity: 1;
-  animation: heart 300ms ease-in-out;
-  -webkit-animation: heart 300ms ease-in-out;
-}
-@keyframes heart {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 .container__content {
   width: 100%;
@@ -767,43 +743,6 @@ body {
 .container__heading h1 {
   font-family: "Shrikhand";
   font-size: 1.8em;
-}
-.container__heading__fa__container {
-  position: relative;
-}
-.container__heading__fa__container .fa-heart {
-  font-size: 1.9em;
-}
-.container__heading__fa__container .fa-solid {
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  transform-origin: bottom;
-  transition: opacity 200ms, ease-in-out;
-  -webkit-transition: opacity 200ms, ease-in-out;
-  -moz-transition: opacity 200ms, ease-in-out;
-  -ms-transition: opacity 200ms, ease-in-out;
-  -o-transition: opacity 200ms, ease-in-out;
-}
-.container__heading__fa__container:hover .fa-solid {
-  opacity: 1;
-  animation: heart 300ms ease-in-out;
-  -webkit-animation: heart 300ms ease-in-out;
-}
-@keyframes heart {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 .container__content {
   width: 100%;

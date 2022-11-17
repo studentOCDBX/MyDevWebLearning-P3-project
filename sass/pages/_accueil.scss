@@ -169,33 +169,6 @@
           font-size: 1.2em;
         }
       }
-      &__fa__container {
-        position: relative;
-        & .fa-heart {
-          font-size: 1.9em;
-        }
-        & > .fa-solid {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          opacity: 0;
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-          background-image: $heart-gradient;
-          transition: all 200ms ease-in-out;
-          -webkit-transition: all 200ms ease-in-out;
-          -moz-transition: all 200ms ease-in-out;
-          -ms-transition: all 200ms ease-in-out;
-          -o-transition: all 200ms ease-in-out;
-        }
-        &:active {
-          & > i:nth-of-type(2) {
-            opacity: 1;
-          }
-        }
-      }
       & span {
         color: $black-color;
         background-color: $tertiary-color;
