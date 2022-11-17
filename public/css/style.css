@@ -328,13 +328,13 @@ body {
   text-transform: capitalize;
   font-size: 1.2em;
 }
-.restaurants__card__body .restaurants__card__body__fa__container {
+.restaurants__card__body__fa__container {
   position: relative;
 }
-.restaurants__card__body .restaurants__card__body__fa__container .fa-heart {
+.restaurants__card__body__fa__container .fa-heart {
   font-size: 1.9em;
 }
-.restaurants__card__body .restaurants__card__body__fa__container > .fa-solid {
+.restaurants__card__body__fa__container > .fa-solid {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -350,7 +350,7 @@ body {
   -ms-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
 }
-.restaurants__card__body .restaurants__card__body__fa__container:active > i:nth-of-type(2) {
+.restaurants__card__body__fa__container:active > i:nth-of-type(2) {
   opacity: 1;
 }
 .restaurants__card__body span {
@@ -395,6 +395,10 @@ body {
 }
 .header--modfy__arrow {
   display: block;
+}
+
+.header__arrow a:visited {
+  color: #000;
 }
 
 .banner__img > img {
@@ -445,6 +449,7 @@ body {
   -webkit-text-fill-color: transparent;
   color: transparent;
   background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  transform-origin: bottom;
   transition: opacity 200ms, ease-in-out;
   -webkit-transition: opacity 200ms, ease-in-out;
   -moz-transition: opacity 200ms, ease-in-out;
@@ -453,6 +458,16 @@ body {
 }
 .container__heading__fa__container:hover .fa-solid {
   opacity: 1;
+  animation: heart 300ms ease-in-out;
+  -webkit-animation: heart 300ms ease-in-out;
+}
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .container__content {
   width: 100%;
@@ -718,6 +733,10 @@ body {
   display: block;
 }
 
+.header__arrow a:visited {
+  color: #000;
+}
+
 .banner__img > img {
   width: 100%;
   height: 15em;
@@ -766,6 +785,7 @@ body {
   -webkit-text-fill-color: transparent;
   color: transparent;
   background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  transform-origin: bottom;
   transition: opacity 200ms, ease-in-out;
   -webkit-transition: opacity 200ms, ease-in-out;
   -moz-transition: opacity 200ms, ease-in-out;
@@ -774,6 +794,16 @@ body {
 }
 .container__heading__fa__container:hover .fa-solid {
   opacity: 1;
+  animation: heart 300ms ease-in-out;
+  -webkit-animation: heart 300ms ease-in-out;
+}
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .container__content {
   width: 100%;
