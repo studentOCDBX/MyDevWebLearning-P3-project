@@ -1,7 +1,3 @@
-@import "../components/boutton";
-@import "../utils/variables";
-@import "../components/loader";
-
 .location {
   width: 100%;
   height: 8%;
@@ -169,6 +165,7 @@
           font-size: 1.2em;
         }
       }
+
       & span {
         color: $black-color;
         background-color: $tertiary-color;
