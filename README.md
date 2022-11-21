@@ -38,3 +38,19 @@ Vous trouverez [le brief complet du projet](https://s3-eu-west-1.amazonaws.com/c
 
 - Page d’accueil
 - Pages de menu (x4)
+  </br>
+
+### <ins> Technologies </ins>
+
+- Autorisés: HTML / CSS / Sass
+
+- Recommandée: HTML / Sass
+
+- Interdit: Javascript / Frameworks CSS / Inline CSS
+  <br>
+
+### <ins> Tester le projet </ins>
+
+Vous pouvez [tester rapidement le projet,](https://studentocdbx.github.io/MyDevWebLearning-P3-project/) sur mon github pages, soit le cloner: git clone https://github.com/studentOCDBX/MyDevWebLearning-P3-project.git.
+puis installez les dépendances: </br>
+npm install
