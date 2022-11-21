@@ -4,8 +4,8 @@
   "description": "Troisième projet du parcours \"Développeur web\" chez OpenClassroom. L'objectif de ce projet est d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./public/css/style.css",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "sass": "sass --watch ./sass/style.scss:./public/css/prefixed/style.css",
+    "prefixMin": "postcss ./public/css/style.css --use autoprefixer cssnano  -d ./public/css/build/"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,11 @@
     "url": "https://github.com/studentOCDBX/MyDevWebLearning-P3-project/issues"
   },
   "homepage": "https://github.com/studentOCDBX/MyDevWebLearning-P3-project#readme",
-  "dependencies": {
-    "sass": "^1.55.0"
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.56.1"
   }
 }
