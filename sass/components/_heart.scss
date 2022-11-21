@@ -21,11 +21,20 @@
     -ms-transition: opacity 200ms, ease-in-out;
     -o-transition: opacity 200ms, ease-in-out;
   }
-  &:hover {
+  &:active {
     & .fa-solid {
       opacity: 1;
       animation: heart 300ms ease-in-out;
       -webkit-animation: heart 300ms ease-in-out;
+    }
+  }
+  @include breakpoint(tablets) {
+    &:hover {
+      & .fa-solid {
+        opacity: 1;
+        animation: heart 300ms ease-in-out;
+        -webkit-animation: heart 300ms ease-in-out;
+      }
     }
   }
 }

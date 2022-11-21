@@ -18,7 +18,7 @@ body {
   display: inline-block;
   width: 60%;
   margin: 1em 0 1.5em 0;
-  padding: 1.2em 0;
+  padding: 1.2em 0.34em;
   color: #fff;
   background: linear-gradient(170deg, #ff79da 0%, #9356dc 100%);
   border-radius: 1.6em;
@@ -53,10 +53,17 @@ body {
   -ms-transition: opacity 200ms, ease-in-out;
   -o-transition: opacity 200ms, ease-in-out;
 }
-.fa__container:hover .fa-solid {
+.fa__container:active .fa-solid {
   opacity: 1;
   animation: heart 300ms ease-in-out;
   -webkit-animation: heart 300ms ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .fa__container:hover .fa-solid {
+    opacity: 1;
+    animation: heart 300ms ease-in-out;
+    -webkit-animation: heart 300ms ease-in-out;
+  }
 }
 
 @keyframes heart {
@@ -69,10 +76,7 @@ body {
 }
 .loader__container {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -117,10 +121,7 @@ body {
   border: 7px solid transparent;
 }
 .loader::before {
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
+  inset: 10px;
   border-top-color: #ff79da;
   animation: spin 3s linear infinite;
   -webkit-animation: spin 3s linear infinite;
